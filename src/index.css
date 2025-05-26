@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+.fira-code {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  color: #976006;
+}
+
+.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.center-img {
+  position: relative;
+}
+
+.bg-start-img {
+  width: 800px;
+}
+
+.bg-light-img {
+  width: 800px;
+  filter: brightness(170%) contrast(110%);
+}
+
+.lightbulb-select {
+  position: absolute;
+  width: 45px;
+  height: 42px;
+  height: 45px;
+  border-radius: 50%;
+  top: 93px;
+  left: 377px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.select-area {
+  position: absolute;
+  top: 188px;
+  left: 310px;
+  width: 174px;
+  height: 124px;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mein-bild {
+  width: 260px;
+  filter: saturate(40%);
+  position: absolute;
+  top: -55px;
+  left: -45px;
+  opacity: 0;
+  filter: brightness(0.2) blur(8px);
+  transform: scaleY(0.1) scaleX(1.2);
+  transition: opacity 0.3s cubic-bezier(0.4, 2, 0.6, 1) 0.1s,
+    filter 0.3s cubic-bezier(0.4, 2, 0.6, 1) 0.1s,
+    transform 0.25s cubic-bezier(0.4, 2, 0.6, 1) 0.1s;
+  pointer-events: none;
+}
+
+.mein-bild.monitor-on {
+  opacity: 1;
+  filter: brightness(1) blur(0);
+  transform: scaleY(1) scaleX(1);
+  transition: opacity 0.2s, filter 0.2s, transform 0.2s;
+  pointer-events: auto;
+}
+
+.tracking-in-expand {
+  font-size: 4rem;
+  font-weight: 200;
+  font-family: "Fira Code", monospace;
+  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
