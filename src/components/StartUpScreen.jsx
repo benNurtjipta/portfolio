@@ -12,7 +12,8 @@ const StartUpScreen = () => {
 
   return (
     <section className="start-screen">
-      <h1 className="tracking-in-expand">ben nurtjipta</h1>
+      <h1 className="tracking-in-expand">Ben Nurtjipta</h1>
+      <h1 className="tracking-in-expand job-title">WEB DEVELOPER</h1>
       <div className="center-img">
         <div className="lightbulb-select"></div>
         <img

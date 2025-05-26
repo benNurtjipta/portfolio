@@ -91,9 +91,15 @@ body {
   font-size: 4rem;
   font-weight: 200;
   font-family: "Fira Code", monospace;
-  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+  -webkit-animation: tracking-in-expand 5s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
-  animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.job-title {
+  font-size: 2rem;
+  color: #6a4305;
+  font-weight: 400;
 }
 
 @-webkit-keyframes tracking-in-expand {
