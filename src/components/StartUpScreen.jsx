@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const StartUpScreen = () => {
   const [isBright, setIsBright] = useState(false);
@@ -9,6 +9,13 @@ const StartUpScreen = () => {
   const toggleBright = () => {
     return setIsBright(!isBright);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsBright(Math.random() > 0.5);
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="start-screen">
@@ -28,6 +35,9 @@ const StartUpScreen = () => {
             src="./icke.png"
             alt=""
           />
+        </div>
+        <div className="fill-black">
+          <p className="start-text">START</p>
         </div>
       </div>
     </section>

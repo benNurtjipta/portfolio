@@ -1,9 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Press+Start+2P&display=swap");
 
 .fira-code {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
   font-weight: 200;
+  font-style: normal;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -38,7 +44,7 @@ body {
 
 .bg-light-img {
   width: 800px;
-  filter: brightness(170%) contrast(110%);
+  filter: brightness(140%) contrast(110%);
 }
 
 .lightbulb-select {
@@ -62,14 +68,36 @@ body {
   overflow: hidden;
   border-radius: 6px;
   cursor: pointer;
+  z-index: 2;
+}
+
+.fill-black {
+  position: absolute;
+  top: 188px;
+  left: 310px;
+  width: 174px;
+  height: 124px;
+  border-radius: 6px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-text {
+  font-family: "Press Start 2P", system-ui;
+  color: #ffffff;
+  background: #232323;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
 }
 
 .mein-bild {
-  width: 260px;
+  width: 220px;
   filter: saturate(40%);
   position: absolute;
-  top: -55px;
-  left: -45px;
+  top: -40px;
+  left: -25px;
   opacity: 0;
   filter: brightness(0.2) blur(8px);
   transform: scaleY(0.1) scaleX(1.2);
