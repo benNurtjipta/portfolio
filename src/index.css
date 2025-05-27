@@ -201,7 +201,7 @@ body {
   color: #976006;
   font-size: 0.9rem;
   width: 350px;
-  height: 550px;
+  height: 580px;
   border: 1px #976006 solid;
   position: absolute;
   right: 5%;
@@ -223,7 +223,7 @@ body {
   color: #976006;
   font-size: 0.9rem;
   width: 350px;
-  height: 550px;
+  height: 580px;
   border: 1px #976006 solid;
   position: absolute;
   left: 5%;
@@ -275,4 +275,13 @@ code {
 
 .hidden-about {
   opacity: 0;
+}
+
+.projects-list {
+  font-size: 0.7rem;
+}
+
+.projects-list a {
+  color: #56ebff;
+  text-decoration: none;
 }
