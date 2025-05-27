@@ -94,12 +94,12 @@ body {
 
 .mein-bild {
   width: 220px;
-  filter: saturate(40%);
+
   position: absolute;
   top: -40px;
   left: -25px;
   opacity: 0;
-  filter: brightness(0.2) blur(8px);
+  filter: brightness(0.2) blur(8px) saturate(50%);
   transform: scaleY(0.1) scaleX(1.2);
   transition: opacity 0.3s cubic-bezier(0.4, 2, 0.6, 1) 0.1s,
     filter 0.3s cubic-bezier(0.4, 2, 0.6, 1) 0.1s,
@@ -109,7 +109,7 @@ body {
 
 .mein-bild.monitor-on {
   opacity: 1;
-  filter: brightness(1) blur(0);
+  filter: brightness(1) blur(0) saturate(50%);
   transform: scaleY(1) scaleX(1);
   transition: opacity 0.2s, filter 0.2s, transform 0.2s;
   pointer-events: auto;
