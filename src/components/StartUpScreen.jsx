@@ -25,14 +25,14 @@ const StartUpScreen = () => {
         <div className="lightbulb-select"></div>
         <img
           className={isBright ? "bg-light-img" : "bg-start-img"}
-          src="./atari.png"
+          src="/assets/atari.png"
           alt=""
         />
         <div onClick={toggleBright} className="lightbulb-select"></div>
         <div onClick={togglePicture} className="select-area">
           <img
             className={`mein-bild${showPicture ? " monitor-on" : ""}`}
-            src="./icke.png"
+            src="/assets/icke.png"
             alt=""
           />
         </div>
