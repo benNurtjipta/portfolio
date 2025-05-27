@@ -30,8 +30,8 @@ const Projects = () => {
           <p>{project.description}</p>
           <a href={project.link} target="_blank" rel="noopener noreferrer">
             {project.link.includes("github")
-              ? "View on GitHub"
-              : "Visit Website"}
+              ? "VIEW ON GITHUB"
+              : "VISIT WEBSITE"}
           </a>
         </div>
       ))}

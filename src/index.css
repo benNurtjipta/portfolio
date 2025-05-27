@@ -165,12 +165,6 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  .tracking-in-expand {
-    font-size: 3rem;
-  }
-}
-
 .nav-button {
   font-family: "Fira Code", monospace;
   color: #976006;
@@ -211,7 +205,7 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.5rem;
   justify-content: space-between;
   align-items: start;
   transition: opacity 1.5s ease;
@@ -233,7 +227,7 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.5rem;
   justify-content: space-between;
   align-items: start;
   transition: opacity 1.5s ease;
@@ -252,7 +246,7 @@ code {
 }
 
 .code-block a {
-  color: #56ebff;
+  color: #7debfa;
   text-decoration: none;
 }
 
@@ -282,6 +276,20 @@ code {
 }
 
 .projects-list a {
-  color: #56ebff;
+  color: #7debfa;
   text-decoration: none;
+  font-size: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  .tracking-in-expand {
+    font-size: 3rem;
+  }
+}
+
+h5 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-decoration: underline;
+  color: #e49d29;
 }
