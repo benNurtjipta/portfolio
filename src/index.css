@@ -154,3 +154,9 @@ body {
     opacity: 1;
   }
 }
+
+@media (max-width: 600px) {
+  .tracking-in-expand {
+    font-size: 3rem;
+  }
+}
