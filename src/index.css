@@ -3,7 +3,7 @@
 .fira-code {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -28,10 +28,20 @@ body {
 
 .start-screen {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  width: 600px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
 }
 
 .center-img {
@@ -159,4 +169,110 @@ body {
   .tracking-in-expand {
     font-size: 3rem;
   }
+}
+
+.nav-button {
+  font-family: "Fira Code", monospace;
+  color: #976006;
+  font-size: 1rem;
+  border: 1px #976006 solid;
+  border-radius: 5px;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+}
+
+.fade-in {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.right-aside {
+  border-radius: 5px;
+  font-family: "Fira Code", monospace;
+  color: #976006;
+  font-size: 0.9rem;
+  width: 350px;
+  height: 550px;
+  border: 1px #976006 solid;
+  position: absolute;
+  right: 5%;
+  top: 10rem;
+  background-color: rgb(0, 0, 0);
+  z-index: 4;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  justify-content: space-between;
+  align-items: start;
+  transition: opacity 1.5s ease;
+}
+
+.left-aside {
+  border-radius: 5px;
+  font-family: "Fira Code", monospace;
+  color: #976006;
+  font-size: 0.9rem;
+  width: 350px;
+  height: 550px;
+  border: 1px #976006 solid;
+  position: absolute;
+  left: 5%;
+  top: 10rem;
+  background-color: rgb(0, 0, 0);
+  z-index: 4;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  justify-content: space-between;
+  align-items: start;
+  transition: opacity 1.5s ease;
+}
+
+h4 {
+  margin: 0.5rem 0;
+}
+
+pre {
+  margin-top: 1rem;
+}
+
+code {
+  color: #ec76cd;
+}
+
+.code-block a {
+  color: #56ebff;
+  text-decoration: none;
+}
+
+.code-block a:hover {
+  text-decoration: underline;
+}
+
+.const-span {
+  color: rgb(186, 186, 186);
+}
+
+.exp {
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.fade-in-about {
+  opacity: 1;
+}
+
+.hidden-about {
+  opacity: 0;
 }
