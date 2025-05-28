@@ -301,14 +301,21 @@ h5 {
   }
   .left-aside {
     position: relative;
+    height: 100vh;
+    justify-content: center;
+    gap: 1rem;
     left: 0;
     top: 0;
     margin-top: 3rem;
   }
   .right-aside {
     position: relative;
+    height: 100vh;
+    justify-content: center;
+    gap: 1rem;
     right: 0;
     top: 0;
     margin-top: 3rem;
   }
+  /* jump to location ???*/
 }
