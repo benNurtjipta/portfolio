@@ -293,3 +293,10 @@ h5 {
   text-decoration: underline;
   color: #e49d29;
 }
+
+.double-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

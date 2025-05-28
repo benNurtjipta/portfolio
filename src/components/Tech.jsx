@@ -30,12 +30,21 @@ const Tech = ({
       </p>
       <h4>PROJECTS</h4>
       <Projects />
-      <button
-        onClick={resetAll}
-        className={`nav-button exp ${showExp ? "fade-in" : "hidden"}`}
-      >
-        reset
-      </button>
+      <div className="double-buttons exp">
+        <button
+          onClick={resetAll}
+          className={`nav-button  ${showExp ? "fade-in" : "hidden"}`}
+        >
+          reset
+        </button>
+        <a
+          href="/cv.pdf"
+          download="Ben_Nurtjipta_CV.pdf"
+          className={`nav-button ${showExp ? "fade-in" : "hidden"}`}
+        >
+          cv
+        </a>
+      </div>
     </aside>
   );
 };
