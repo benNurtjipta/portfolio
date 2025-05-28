@@ -8,6 +8,9 @@ const StartUpScreen = () => {
   const [showAbout, setShowAbout] = useState(false);
   const [showExp, setShowExp] = useState(false);
   const intervalRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const techRef = useRef(null);
+  const mainSectionRef = useRef(null);
 
   const togglePicture = () => {
     setShowPicture((prev) => !prev);
@@ -22,7 +25,30 @@ const StartUpScreen = () => {
   };
 
   const toggleAbout = () => {
-    return setShowAbout(!showAbout);
+    setShowAbout((prev) => !prev);
+    if (window.innerWidth <= 800 && aboutMeRef.current) {
+      setTimeout(() => {
+        aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  const handleExpClick = () => {
+    setShowExp((prev) => !prev);
+    if (window.innerWidth <= 800 && techRef.current) {
+      setTimeout(() => {
+        techRef.current.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+  const handleResetScrollTop = () => {
+    setShowExp(false);
+    setShowPicture(false);
+    setShowAbout(false);
+    startInterval();
+    if (mainSectionRef.current) {
+      mainSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const startInterval = () => {
@@ -38,7 +64,7 @@ const StartUpScreen = () => {
   }, []);
 
   return (
-    <section className="start-screen">
+    <section ref={mainSectionRef} className="start-screen">
       <div className="content-wrapper">
         <h1 className="tracking-in-expand">Ben Nurtjipta</h1>
         <h1 className="tracking-in-expand job-title">WEB DEVELOPER</h1>
@@ -69,18 +95,22 @@ const StartUpScreen = () => {
         about me
       </button>
       <AboutMe
+        ref={aboutMeRef}
         setShowExp={setShowExp}
         showExp={showExp}
         showAbout={showAbout}
+        onExpClick={handleExpClick}
       />
       <Tech
-        setShowExp={setShowExp}
         setShowAbout={setShowAbout}
         setShowPicture={setShowPicture}
-        showExp={showExp}
         showAbout={showAbout}
         showPicture={showPicture}
         startInterval={startInterval}
+        setShowExp={setShowExp}
+        showExp={showExp}
+        ref={techRef}
+        onReset={handleResetScrollTop}
       />
     </section>
   );

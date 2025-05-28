@@ -1,10 +1,9 @@
-const AboutMe = ({ setShowExp, showExp, showAbout }) => {
-  const toggleExp = () => {
-    return setShowExp(!showExp);
-  };
+import React, { forwardRef } from "react";
 
+const AboutMe = forwardRef(({ showAbout, onExpClick }, ref) => {
   return (
     <aside
+      ref={ref}
       className={`right-aside ${showAbout ? "fade-in-about" : "hidden-about"}`}
     >
       <h4>ABOUT ME</h4>
@@ -57,12 +56,12 @@ const AboutMe = ({ setShowExp, showExp, showAbout }) => {
       </pre>
 
       <button
-        onClick={toggleExp}
+        onClick={onExpClick}
         className={`nav-button exp ${showAbout ? "fade-in" : "hidden"}`}
       >
         experience
       </button>
     </aside>
   );
-};
+});
 export default AboutMe;
