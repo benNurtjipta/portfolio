@@ -281,12 +281,6 @@ code {
   font-size: 0.6rem;
 }
 
-@media (max-width: 700px) {
-  .tracking-in-expand {
-    font-size: 3rem;
-  }
-}
-
 h5 {
   font-size: 0.9rem;
   font-weight: 300;
@@ -299,4 +293,22 @@ h5 {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .tracking-in-expand {
+    font-size: 3rem;
+  }
+  .left-aside {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: 3rem;
+  }
+  .right-aside {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-top: 3rem;
+  }
 }
