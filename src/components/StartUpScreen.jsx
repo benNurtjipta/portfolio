@@ -13,7 +13,7 @@ const StartUpScreen = () => {
   const mainSectionRef = useRef(null);
 
   const togglePicture = () => {
-    setShowPicture((prev) => !prev);
+    setShowPicture(true);
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
@@ -25,7 +25,7 @@ const StartUpScreen = () => {
   };
 
   const toggleAbout = () => {
-    setShowAbout((prev) => !prev);
+    setShowAbout(true);
     if (window.innerWidth <= 800 && aboutMeRef.current) {
       setTimeout(() => {
         aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
@@ -34,7 +34,7 @@ const StartUpScreen = () => {
   };
 
   const handleExpClick = () => {
-    setShowExp((prev) => !prev);
+    setShowExp(true);
     if (window.innerWidth <= 800 && techRef.current) {
       setTimeout(() => {
         techRef.current.scrollIntoView({ behavior: "smooth" });
