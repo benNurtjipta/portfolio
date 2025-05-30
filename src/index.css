@@ -41,7 +41,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 200px);
 }
 
 .center-img {
