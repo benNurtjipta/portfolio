@@ -298,14 +298,16 @@ h5 {
 @media (max-width: 800px) {
   .tracking-in-expand {
     font-size: 2.8rem;
+    margin-top: 2rem;
   }
   .job-title {
     font-size: 1.5rem;
+    margin-bottom: 3rem;
   }
 
   .left-aside {
     position: relative;
-    height: 100vh;
+
     justify-content: center;
     gap: 1rem;
     left: 0;
@@ -314,12 +316,54 @@ h5 {
   }
   .right-aside {
     position: relative;
-    height: 100vh;
+
     justify-content: center;
     gap: 1rem;
     right: 0;
     top: 0;
     margin-top: 3rem;
   }
-  /* jump to location ???*/
+  .outer-rim {
+    padding: 1rem 0rem;
+    height: 100vh;
+  }
+
+  .content-wrapper {
+    width: 100vw;
+  }
+  .bg-start-img {
+    width: 500px;
+  }
+
+  .bg-light-img {
+    width: 500px;
+  }
+  .lightbulb-select {
+    width: 30px;
+    height: 30px;
+    top: 58px;
+    left: 236px;
+  }
+
+  .mein-bild {
+    width: 160px;
+    top: -35px;
+  }
+
+  .select-area {
+    top: 120px;
+    left: 194px;
+    width: 109px;
+    height: 76px;
+  }
+
+  .fill-black {
+    top: 120px;
+    left: 194px;
+    width: 109px;
+    height: 76px;
+  }
+  .start-text {
+    font-size: 0.7rem;
+  }
 }
