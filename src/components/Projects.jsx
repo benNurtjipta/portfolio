@@ -17,7 +17,7 @@ const Projects = () => {
     },
     {
       title: "vscrx",
-      description: "Android app to remote control VS Code .",
+      description: "Android app to remote control VS Code.",
       link: "https://github.com/benNurtjipta/vscrx",
     },
   ];
