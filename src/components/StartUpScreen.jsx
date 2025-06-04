@@ -7,6 +7,7 @@ const StartUpScreen = () => {
   const [showPicture, setShowPicture] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showExp, setShowExp] = useState(false);
+  const [isFading, setIsFading] = useState(false);
   const intervalRef = useRef(null);
   const aboutMeRef = useRef(null);
   const techRef = useRef(null);
@@ -25,6 +26,7 @@ const StartUpScreen = () => {
   };
 
   const toggleAbout = () => {
+    setIsFading(false);
     setShowAbout(true);
     if (window.innerWidth <= 800 && aboutMeRef.current) {
       setTimeout(() => {
@@ -34,6 +36,7 @@ const StartUpScreen = () => {
   };
 
   const handleExpClick = () => {
+    setIsFading(false);
     setShowExp(true);
     if (window.innerWidth <= 800 && techRef.current) {
       setTimeout(() => {
@@ -42,13 +45,16 @@ const StartUpScreen = () => {
     }
   };
   const handleResetScrollTop = () => {
-    setShowExp(false);
+    setIsFading(true);
     setShowPicture(false);
-    setShowAbout(false);
     startInterval();
     if (mainSectionRef.current) {
       mainSectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
+    setTimeout(() => {
+      setShowExp(false);
+      setShowAbout(false);
+    }, 300);
   };
 
   const startInterval = () => {
@@ -100,8 +106,10 @@ const StartUpScreen = () => {
         showExp={showExp}
         showAbout={showAbout}
         onExpClick={handleExpClick}
+        isFading={isFading}
       />
       <Tech
+        isFading={isFading}
         setShowAbout={setShowAbout}
         setShowPicture={setShowPicture}
         showAbout={showAbout}

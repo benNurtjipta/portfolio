@@ -209,7 +209,7 @@ body {
   gap: 0.5rem;
   justify-content: space-between;
   align-items: start;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.3s ease;
 }
 
 .left-aside {
@@ -231,7 +231,21 @@ body {
   gap: 0.5rem;
   justify-content: space-between;
   align-items: start;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.3s ease;
+}
+
+.outer {
+  transition: opacity 1.3s ease;
+}
+.outer-rim-coll {
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.outer-rim-fade {
+  opacity: 0;
+  height: 100vh;
 }
 
 h4 {
@@ -266,10 +280,17 @@ code {
 
 .fade-in-about {
   opacity: 1;
+  height: 580px;
 }
 
 .hidden-about {
   opacity: 0;
+  height: 0;
+}
+
+.fade-out-about {
+  opacity: 0;
+  height: 580px;
 }
 
 .projects-list {
@@ -325,6 +346,7 @@ h5 {
     margin-top: 3rem;
   }
   .outer-rim {
+    opacity: 1;
     padding: 1rem 0rem;
     height: 100vh;
   }

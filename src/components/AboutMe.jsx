@@ -1,11 +1,18 @@
 import React, { forwardRef } from "react";
 
-const AboutMe = forwardRef(({ showAbout, onExpClick }, ref) => {
+const AboutMe = forwardRef(({ showAbout, onExpClick, isFading }, ref) => {
   return (
-    <div className="outer-rim" ref={ref}>
+    <div
+      className={`outer ${showAbout ? "outer-rim" : ""} 
+          ${!showAbout && isFading ? "outer-rim-fade" : ""} ${
+        !showAbout && !isFading ? "outer-rim-coll" : ""
+      }`}
+      ref={ref}
+    >
       <aside
-        className={`right-aside ${
-          showAbout ? "fade-in-about" : "hidden-about"
+        className={`right-aside ${showAbout ? "fade-in-about" : ""} 
+          ${!showAbout && isFading ? "fade-out-about" : ""} ${
+          !showAbout && !isFading ? "hidden-about" : ""
         }`}
       >
         <h4>ABOUT ME</h4>

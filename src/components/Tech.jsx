@@ -12,14 +12,24 @@ const Tech = forwardRef(
       showExp,
       startInterval,
       onReset,
+      isFading,
     },
     ref
   ) => {
     return (
-      <div className="outer-rim" ref={ref}>
+      <div
+        className={`outer ${showExp ? "outer-rim" : ""} 
+          ${!showExp && isFading ? "outer-rim-fade" : ""} ${
+          !showExp && !isFading ? "outer-rim-coll" : ""
+        }`}
+        ref={ref}
+      >
         <aside
           ref={ref}
-          className={`left-aside ${showExp ? "fade-in-about" : "hidden-about"}`}
+          className={`left-aside ${showExp ? "fade-in-about" : ""} 
+          ${!showExp && isFading ? "fade-out-about" : ""} ${
+            !showExp && !isFading ? "hidden-about" : ""
+          }`}
         >
           <h4>STACK</h4>
           <p>
