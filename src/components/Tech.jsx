@@ -48,13 +48,7 @@ const Tech = forwardRef(
             >
               reset
             </button>
-            <a
-              href="/cv.pdf"
-              download="Ben_Nurtjipta_CV.pdf"
-              className={`nav-button ${showExp ? "fade-in" : "hidden"}`}
-            >
-              cv
-            </a>
+            
           </div>
         </aside>
       </div>
